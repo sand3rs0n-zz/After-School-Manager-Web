@@ -1,0 +1,46 @@
+<section data-ng-controller="AdventsController" data-ng-init="findOne()">
+    <div class="page-header">
+        <h1 id="adventName"  data-ng-bind="advent.name"></h1>
+        <div class="modal-body">
+            <div class="row">
+                <div id="adventDesc" class="col-md-6">
+                    <b>Description:</b>
+                    <span data-ng-bind-html="advent.description"></span>
+                </div>
+            </div>
+            <div id="adventDate" class="row">
+                <div class="col-md-6">
+                    <b>Date:</b>
+                    <span data-ng-bind="advent.date.month"></span>/<span
+                     data-ng-bind="advent.date.day"></span>/<span
+                     data-ng-bind="advent.date.year"></span>
+                </div>
+            </div>
+            <div id="adventTime" class="row">
+                <div class="col-md-6">
+                    <b>Time:</b>
+                    <span data-ng-bind="advent.time.hr"></span>:<span
+                        data-ng-bind="advent.time.min"></span> <span
+                        data-ng-bind="advent.time.timeSuffix"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="pull-right">
+                    <a class="btn btn-primary" href="/#!/advents/{{advent._id}}/edit" name="updateAdventButton" >
+                        <i class="glyphicon glyphicon-edit"></i>
+                    </a>
+                    <a class="btn btn-danger" data-ng-click="remove();" name="deleteAdventButton">
+                        <i class="glyphicon glyphicon-trash"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="row">
+        <h3>View Events:</h3>    
+        <a href="/#!/advents"><label class="btn btn-info">List</label></a>
+        <a href="/#!/calendar"><label class="btn btn-info">Calendar</label></a>
+    </div>
+</section>

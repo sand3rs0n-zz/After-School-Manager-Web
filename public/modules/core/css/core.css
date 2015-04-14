@@ -1,0 +1,342 @@
+.html {
+    height: 100%;
+}
+.body {
+    min-height: 100%;
+    background-color: #454588 !important;
+
+}
+.actualBody{
+    background-color: rgba(224,224,224,.6) !important;
+
+
+}
+.content {
+    margin-top: -10px;
+
+}
+.undecorated-link:hover {
+    text-decoration: none;
+}
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+.ng-invalid.ng-dirty {
+    border-color: #FA787E;
+}
+.ng-valid.ng-dirty {
+    border-color: #78FA89;
+}
+
+.checkbox {
+
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+}
+.half {
+    margin-left: 5px;
+    margin-right: 5px;
+    float: left;
+    width: 100%;
+    min-height: 105px;
+    vertical-align: middle;
+}
+.home-buttons {
+    background-color: white !important;
+}
+
+.home-buttons:hover {
+    background-color: rgb(235, 64, 51) !important;
+    color: white;
+}
+
+
+.line-height {
+    padding-top: 29px;
+    padding-bottom: 30px;
+}
+
+.form-container {
+    padding: 25px;
+}
+
+.list-group {
+    padding-right: 0;
+}
+.list-group-item:nth-child(odd){
+    background-color: rgba(235, 64, 51,.6); !important;
+}
+.list-group-item:nth-child(odd):hover{
+    background-color: rgba(235, 64, 51, .5); !important;
+}
+/* johns stuff */
+.header {
+    overflow: hidden;
+}
+
+
+.slideout {
+    position: fixed;
+    top: 30%;
+    left: 0;
+    width: 4.5vw;
+    padding: 12px 0;
+    text-align: center;
+    background: rgb(235, 64, 51);
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    -webkit-border-radius: 0 5px 5px 0;
+    -moz-border-radius: 0 5px 5px 0;
+    border-radius: 0 5px 5px 0;
+    z-index: 99;
+}
+.slideout_inner {
+    position: fixed;
+    top: 0;
+    left: -20vw;
+    background-image: url(http://i.imgur.com/xmu90PA.jpg);
+    width: 20vw;
+    padding: 25px;
+    height: 100%;
+
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    -webkit-border-radius: 0 0 5px 0;
+    -moz-border-radius: 0 0 5px 0;
+    border-radius: 0 0 5px 0;
+    color:rgb(235, 64, 51);
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 20;
+    font-weight: 900;
+    border-style: solid;
+    border-right: solid rgb(235, 64, 51);
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+    z-index: 99;
+}
+.slideout:hover {
+    left: 15.5vw;
+}
+.slideout:hover .slideout_inner {
+    left: 0;
+}
+
+
+.footer-bar {
+
+    position: fixed;
+    z-index: 1000;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 6vw;
+
+    /* Height of the footer */
+    background: #484848;
+    overflow: hidden;
+
+
+    /** add this **/
+    -moz-box-sizing:border-box;
+    /** add this **/
+    -webkit-box-sizing:border-box;
+    /** add this **/
+    -ms-box-sizing:border-box;
+    /** add this **/
+    box-sizing:border-box;
+}
+.round-button {
+   /* width:25%;*/
+    padding-top: .25vw;
+    padding-left: 4vw;
+}
+.round-button-circle {
+    width: 5.5vw;
+    height: 5.5vw;
+    border-radius: 50%;
+    overflow:hidden;
+    background: rgb(235, 64, 51);
+    text-align: center;
+
+}
+.round-button-circle:hover {
+    background:rgb(235, 64, 51);
+}
+.round-button .round-button-link {
+    padding-bottom:75%;
+    margin-left: -4vw;
+    text-align: center;
+    font-size: 4.5vw;
+    color:#e2eaf3;
+}
+
+.round-back-button{
+     padding-top: .125vw;
+
+}
+
+
+
+.page-break { 
+    padding-bottom: 15%;
+}
+.edit-create-form {
+    padding-bottom: 30%;
+}
+
+
+/*CUSTOM BUTTON FOR PARENT CHECKOUT */
+.checkout-btn {
+    height: 50px;
+    border: 1px solid black;
+    margin-bottom: 15px;
+}
+
+.checkout-btn:hover {
+    background-color: rgb(235, 64, 51);
+    color: white;
+}
+
+.checkout-btn-radio:checked+label {
+    background-color: rgb(235, 64, 51);
+    color: white;
+}
+
+.checkout-btn-radio {
+    display:none;
+}
+
+/*CUSTOM BUTTON FOR DAY PICKER, FOR SCHEDULING STUDENTS ATTENDANCE*/
+.btn-day {
+    border: none;
+    color: #ffffff;
+    background-color: #75777A;
+    font-size: 13px;
+    margin: 2px;
+    padding: 10px;
+}
+
+.btn-day:hover {
+    background-color: #4b4d50;
+}
+.btn-day:focus,
+.btn-day:active,
+.btn-day.active,
+.open .dropdown-toggle.btn-day {
+    color: #ffffff;
+    background-color: #115DBA;
+    border-color: #FCFCFC;
+}
+
+.btn-day:active,
+.btn-day.active,
+.open .dropdown-toggle.btn-day {
+    background-image: none;
+}
+
+.btn-day.disabled,
+.btn-day[disabled],
+fieldset[disabled] .btn-day,
+.btn-day.disabled:hover,
+.btn-day[disabled]:hover,
+fieldset[disabled] .btn-day:hover,
+.btn-day.disabled:focus,
+.btn-day[disabled]:focus,
+fieldset[disabled] .btn-day:focus,
+.btn-day.disabled:active,
+.btn-day[disabled]:active,
+fieldset[disabled] .btn-day:active,
+.btn-day.disabled.active,
+.btn-day[disabled].active,
+fieldset[disabled] .btn-day.active {
+    background-image: none;
+}
+
+.btn-day .badge {
+    color: #75777A;
+    background-color: #ffffff;
+}
+
+
+
+/*for the pin pad*/
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+.givemesomespace {
+    margin-top: 10px;
+}
+#PINform {
+    position: absolute;
+    width: 100%; height: 5vw;
+    left: 50%;
+    margin-left: -50%;
+    top: 50%;
+    margin-top: -87.5%;
+}
+#PINbox {
+
+    
+    margin: 3%;
+    width: 92%;
+    font-size: 3vw;
+    text-align: center;
+    border: none;
+    border: 2px solid rgb(235, 64, 51);
+    background: #fff;
+}
+
+
+.PINbutton {
+    background: #fff;
+    color: rgb(235, 64, 51);
+
+    
+    border: 2px solid rgb(235, 64, 51);
+    border-radius: 50%;
+    font-size: 2vw;
+    text-align: center;
+    width: 4vw;
+    height: 4vw;
+    
+    margin: .6vw .8vw;
+}
+.clear, .enter {
+    
+    font-size: 1vw;
+}
+.PINbutton:hover {
+    background: #fff;
+    border: 2px solid #FF5A59;
+    color: #FF5A59;
+}
+
+.sidebarSection{
+    padding-top: 8px;
+    padding-bottom: 20px; 
+    border-top: solid;
+    border-width: 1px;
+    border-color: black;
+
+}
+.hideSidebar{
+    padding-top: 35px;
+}
+
+.sidebarBtn{
+    margin-top: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+}

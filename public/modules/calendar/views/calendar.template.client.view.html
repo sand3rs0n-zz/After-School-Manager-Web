@@ -1,0 +1,36 @@
+<div class="calendarAboveHeader">
+    <div class="col-sm-8 ">
+        <h1 id="page-title">Events</h1>
+    </div>
+    <div class="col-sm-4">
+        <span>
+            <h1>
+                <button name="today" class="btn btn-sm today-button" ng-click="goToday()">
+                    <label class="fa fa-calendar"></label>  Today
+                </button>
+            </h1>
+        </span>
+        
+    </div>
+</div>
+
+<div class="header" data-ng-swipe-right="previous()" data-ng-swipe-left="next()">
+    <i name="prev" class="fa fa-angle-left" ng-click="previous()" ></i>
+        <span>
+            {{month.format("MMMM, YYYY")}}
+        </span>
+        
+    <i name="next" class="fa fa-angle-right" ng-click="next()"></i>
+</div>
+<div class="week names" data-ng-swipe-right="previous()" data-ng-swipe-left="next()">
+    <span class="day">Sun</span>
+    <span class="day">Mon</span>
+    <span class="day">Tue</span>
+    <span class="day">Wed</span>
+    <span class="day">Thu</span>
+    <span class="day">Fri</span>
+    <span class="day">Sat</span>
+</div>
+<div class="week" ng-repeat="week in weeks" data-ng-swipe-right="previous()" data-ng-swipe-left="next()">
+    <span class="day" ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected) }" ng-click="select(day)" ng-repeat="day in week.days" name="testing">{{day.number}}<div class="grad" ng-class="{eventExist: hasEvent(day), hidden: !hasEvent(day)}"></div></span>
+</div>

@@ -1,0 +1,99 @@
+<section data-ng-controller="AdventsController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Upcoming Events</h1>
+    </div>
+    <div class="list-group">
+        <a data-ng-repeat="advent in advents | orderBy:['date.year', 'date.month','date.day']" data-ng-href="#!/advents/{{advent._id}}" class="list-group-item" data-ng-show="pastDate(advent, 'upcoming')">
+            <h2 class="list-group-item-heading" data-ng-bind="advent.name"></h2>
+            <div>
+                <h4>
+                    <p class="list-group-item-text"> {{advent.date.month}}/{{advent.date.day}}/{{advent.date.year}} at {{advent.time.hr}}:{{advent.time.min}} {{advent.time.timeSuffix}}</p>
+                </h4>
+            </div>
+        </a>
+    </div>
+    <br /><br />
+    <div class="page-header">
+        <h1>Past Events</h1>
+    </div>
+    <div class="list-group">
+        <a data-ng-repeat="advent in advents | orderBy:['date.year', 'date.month','date.day']" data-ng-href="#!/advents/{{advent._id}}" class="list-group-item" data-ng-show="pastDate(advent, 'past')">
+            <h2 class="list-group-item-heading" data-ng-bind="advent.name"></h2>
+            <div>
+                <h4>
+                    <p class="list-group-item-text"> {{advent.date.month}}/{{advent.date.day}}/{{advent.date.year}} at {{advent.time.hr}}:{{advent.time.min}} {{advent.time.timeSuffix}}</p>
+                </h4>
+            </div>
+        </a>
+    </div>
+</section>
+<!--
+<section class="mounth" id="january">
+  <div class="calHeader">
+    <h1>JANUARY 2013</h1>
+    <nav class="calMonthSelect" role='padigation'>
+      <span class="calLeftArrow"></span>
+      <span class="calRightArrow"></span>
+    </nav>
+  </div>
+
+  <article class="calBody">
+    <div class="calDays">
+      <b>SU</b>
+      <b>MO</b>
+      <b>TU</b>
+      <b>WE</b>
+      <b>TH</b>
+      <b>FR</b>
+      <b>SA</b>
+    </div>
+    <div class="calDates">
+      <span class="calDate disable">30</span>
+      <span class="calDate disable">31</span>
+
+      <span class="calDate">1</span>
+      <span class="calDate">2</span>
+      <span class="calDate">3</span>
+      <span class="calDate">4</span>
+      <span class="calDate">5</span>
+      <span class="calDate">6</span>
+      <span class="calDate">7</span>
+      <span class="calDate">8</span>
+      <span class="calDate">9</span>
+      <span class="calDate">10</span>
+      <span class="calDate">11</span>
+      <span class="calDate">12</span>
+      <span class="calDate">13</span>
+      <span class="calDate">14</span>
+      <span class="calDate">15</span>
+      <span class="calDate active">16</span>
+      <span class="calDate">17</span>
+      <span class="calDate">18</span>
+      <span class="calDate">19</span>
+      <span class="calDate">20</span>
+      <span class="calDate">21</span>
+      <span class="calDate">22</span>
+      <span class="calDate">23</span>
+      <span class="calDate">24</span>
+      <span class="calDate">25</span>
+      <span class="calDate">26</span>
+      <span class="calDate">27</span>
+      <span class="calDate">28</span>
+      <span class="calDate">29</span>
+      <span class="calDate">30</span>
+      <span class="calDate">31</span>
+
+      <span class="calDate disable">1</span>
+      <span class="calDate disable">2</span>
+      <span class="calDate disable">3</span>
+      <span class="calDate disable">4</span>
+      <span class="calDate disable">5</span>
+      <span class="calDate disable">6</span>
+      <span class="calDate disable">7</span>
+      <span class="calDate disable">8</span>
+      <span class="calDatedisable">9</span>
+    </div>
+  </article>
+</section>
+</section>
+-->

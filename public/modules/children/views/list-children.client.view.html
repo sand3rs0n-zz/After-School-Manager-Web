@@ -1,0 +1,25 @@
+<section data-ng-controller="ChildrenController" data-ng-init="find()">
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-1">
+            <div class="page-header">
+                <h1>List of All Children</h1>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="page-header">
+                <a data-ng-href="#!/children/create" name="addChildButton">
+                    <h1>Add Child</h1>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="list-group col-sm-10 col-sm-offset-1">
+        <a data-ng-repeat="child in children | orderBy: 'lastName'" data-ng-href="#!/children/{{child._id}}" class="list-group-item">
+            <h1 class="list-group-item-heading text-center" data-ng-bind="child.firstName + ' ' + child.lastName"></h1>
+        </a>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!children.$resolved || children.length">
+    	No Children yet, why don't you <a href="/#!/children/create">create one</a>?
+    </div>
+</section>
