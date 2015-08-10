@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-	db: 'mongodb://joshuakegley.com:27017/childmanager-dev',
+	db: 'mongodb://localhost/childmanager-dev',
 	app: {
 		title: 'childManager - Development Environment'
 	},
